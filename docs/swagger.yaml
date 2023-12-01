@@ -1,0 +1,500 @@
+basePath: /api/v1
+definitions:
+  web.errorResponse:
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+    type: object
+  web.response:
+    properties:
+      data: {}
+    type: object
+externalDocs:
+  description: OpenAPI
+  url: https://swagger.io/resources/open-api/
+host: localhost:8080
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: Final Back End.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Gestion odontologica API
+  version: "1.0"
+paths:
+  /dentista/:id:
+    delete:
+      consumes:
+      - application/json
+      description: Delete dentista by id
+      parameters:
+      - description: id del dentista
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: dentista example
+      tags:
+      - dentista
+    get:
+      consumes:
+      - application/json
+      description: Get dentista by id
+      parameters:
+      - description: id del dentista
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: dentista example
+      tags:
+      - dentista
+    patch:
+      consumes:
+      - application/json
+      description: Patch dentista
+      parameters:
+      - description: id del dentista
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: dentista example
+      tags:
+      - dentista
+  /dentistas:
+    get:
+      consumes:
+      - application/json
+      description: Get all dentistas
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: dentista example
+      tags:
+      - dentista
+    post:
+      consumes:
+      - application/json
+      description: Create a new dentista
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: dentista example
+      tags:
+      - dentista
+  /dentistas/:id:
+    put:
+      consumes:
+      - application/json
+      description: Update dentista by id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: dentista example
+      tags:
+      - dentista
+  /paciente/:id:
+    delete:
+      consumes:
+      - application/json
+      description: Delete paciente by id
+      parameters:
+      - description: id del paciente
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: paciente example
+      tags:
+      - paciente
+    get:
+      consumes:
+      - application/json
+      description: Get paciente by id
+      parameters:
+      - description: id del paciente
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: paciente example
+      tags:
+      - paciente
+    patch:
+      consumes:
+      - application/json
+      description: Patch paciente
+      parameters:
+      - description: id del paciente
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: paciente example
+      tags:
+      - paciente
+  /pacientes:
+    get:
+      consumes:
+      - application/json
+      description: Get all pacientes
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: paciente example
+      tags:
+      - paciente
+    post:
+      consumes:
+      - application/json
+      description: Create a new paciente
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: paciente example
+      tags:
+      - paciente
+  /pacientes/:id:
+    put:
+      consumes:
+      - application/json
+      description: Update paciente by id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: paciente example
+      tags:
+      - paciente
+  /turno/:id:
+    delete:
+      consumes:
+      - application/json
+      description: Delete turno by id
+      parameters:
+      - description: id del turno
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: turno example
+      tags:
+      - turno
+    get:
+      consumes:
+      - application/json
+      description: Get turno by id
+      parameters:
+      - description: id del turno
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: turno example
+      tags:
+      - turno
+    patch:
+      consumes:
+      - application/json
+      description: Patch turno
+      parameters:
+      - description: id del turno
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: turno example
+      tags:
+      - turno
+  /turno/pacienteDni/:id:
+    get:
+      consumes:
+      - application/json
+      description: Get turno by paciente id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: turno example
+      tags:
+      - turno
+  /turnos:
+    get:
+      consumes:
+      - application/json
+      description: Get all turnos
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: turno example
+      tags:
+      - turno
+    post:
+      consumes:
+      - application/json
+      description: Post turno
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: turno example
+      tags:
+      - turno
+  /turnos/:id:
+    put:
+      consumes:
+      - application/json
+      description: Update turno by id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/web.errorResponse'
+      summary: turno example
+      tags:
+      - turno
+securityDefinitions:
+  BasicAuth:
+    type: basic
+swagger: "2.0"
